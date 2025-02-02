@@ -25,8 +25,7 @@ import GitHub from '@/public/github_white.svg';
   }
 
 export default async function ProjectDetailsPage({ params }) {
-  const resolvedParams = await params;
-  const { slug } = resolvedParams;
+  const { slug } = params;
   const projects = await getProjects(); //All projects
   const project = projects.find((proj) => proj.slug === slug); //Selected project
 
