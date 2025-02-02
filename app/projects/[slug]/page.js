@@ -6,7 +6,8 @@ import GitHub from '@/public/github_white.svg';
 
   //Generating Metadata dynamically to get Project title as metatitle
   export async function generateMetadata({ params }) {
-    const { slug } = params;
+    const resolvedParams = await params;
+    const { slug } = resolvedParams;
     const projects = await getProjects();
     const project = projects.find((proj) => proj.slug === slug);
 
@@ -24,7 +25,8 @@ import GitHub from '@/public/github_white.svg';
   }
 
 export default async function ProjectDetailsPage({ params }) {
-  const { slug } = params;
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
   const projects = await getProjects(); //All projects
   const project = projects.find((proj) => proj.slug === slug); //Selected project
 
