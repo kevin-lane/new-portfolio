@@ -41,7 +41,7 @@ export default async function ProjectDetailsPage({ params }) {
       <section className='w-2/6'>
         <h1 className="font-black mt-32 mb-4 text-3xl w-96 max-xl:ml-2 max-lg:mt-16 ml-12 uppercase">{title}</h1>
         <h2 className='mt-8 ml-12   font-semibold max-xl:ml-2'>About</h2>
-        <p className="mb-8 ml-12 w-96 max-xl:ml-2">{description}</  p>
+        <p className="mb-8 ml-12 w-96 max-xl:ml-2">{description}</p>
         <section className="mt-8 ml-12 mr-8 max-xl:ml-2">
             <Link className='block mr-8 mb-8 p-4 bg-blue-700 w-72  text-white font-semibold rounded' href= {projectURL}><Image width={30}   className='inline ml-4 m-4 animate-pulse'   src={WebsiteGlobe} alt='right arrow'/ >Open Project</Link>
             <Link className='block mr-8 p-4  bg-blue-700 w-72 text-white font-semibold rounded' href=  {githubURL}><Image width={30} className='inline ml-4 m-4 animate-pulse'   src={GitHub} alt='right arrow'/>Source code on GitHub</Link>
