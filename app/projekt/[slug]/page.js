@@ -51,7 +51,7 @@ export default async function ProjectDetailsPage({ params }) {
         </section>
         <section className='w-4/6 mt-32 max-xl:w-full max-xl:ml-4 max-xl:mt-12'>
         <h2 className="font-semibold mb-4">Kika på sidan här</h2>
-          <iframe src={projectURL} width="100%" height="450"></iframe>
+          {/* <iframe src={projectURL} width="100%" height="450"></iframe> */}
         </section>
     </main>
   );
