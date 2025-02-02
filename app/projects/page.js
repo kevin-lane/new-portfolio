@@ -4,6 +4,12 @@ import { getProjects } from '@/lib/projects';
 import kelanPhoto from '@/assets/kelanphotography.jpg';
 import weatherVue from '@/assets/weather-vue.jpg';
 
+//Meta data for SEO and web availability
+export const metadata = {
+  title: "Projects - Kevin Lane",
+  description: "Check out my portfolio and projects. I would love to help you with your web project as well!",
+};
+
 export default async function Projects() {
   const projects = await getProjects();
 

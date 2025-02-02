@@ -4,6 +4,12 @@ import Link from 'next/link';
 import kelanPhoto from '@/assets/kelanphotography.jpg';
 import weatherVue from '@/assets/weather-vue.jpg';
 
+//Metadata för SEO och synlighet på Google
+export const metadata = {
+  title: "Projektarbeten - Kevin Lane",
+  description: "Kika gärna på min portfolio och projektarbeten för inspiration. Låt mig hjälpa dig eller ditt företag med era utvecklingsprojekt!",
+};
+
 export default async function Projekt() {
   const projects = await getProjects();
 

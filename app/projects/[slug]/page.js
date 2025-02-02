@@ -4,13 +4,32 @@ import Image from 'next/image';
 import WebsiteGlobe from '@/public/websiteGlobe_white.svg';
 import GitHub from '@/public/github_white.svg';
 
+  //Generating Metadata dynamically to get Project title as metatitle
+  export async function generateMetadata({ params }) {
+    const { slug } = params;
+    const projects = await getProjects();
+    const project = projects.find((proj) => proj.slug === slug);
+
+    if (!project) {
+      return {
+        title: 'Project Not Found',
+        description: 'The requested project does not exist.',
+      };
+    }
+
+    return {
+      title: project.title + ' - Kevin Lane',
+      description: project.description,
+    };
+  }
+
 export default async function ProjectDetailsPage({ params }) {
   const { slug } = params;
   const projects = await getProjects(); //All projects
   const project = projects.find((proj) => proj.slug === slug); //Selected project
 
   if(!project){
-    return <h1>Project not found</h1>
+    return <h1 className='min-h-screen block p-32 text-4xl'>Project not found! Please keep updated for future projects!</h1>
   }
 
   const { id, title, description, technologies = [], projectURL, githubURL } = project;
@@ -18,7 +37,7 @@ export default async function ProjectDetailsPage({ params }) {
   return (
     <main className="min-h-screen p-8 flex flex-row max-xl:block">
       <section className='w-2/6'>
-        <h1 className="font-black mt-32 mb-4 text-3xl w-96 max-xl:ml-2 max-lg:mt-16 ml-12 uppercase">{title}</  h1>
+        <h1 className="font-black mt-32 mb-4 text-3xl w-96 max-xl:ml-2 max-lg:mt-16 ml-12 uppercase">{title}</h1>
         <h2 className='mt-8 ml-12   font-semibold max-xl:ml-2'>About</h2>
         <p className="mb-8 ml-12 w-96 max-xl:ml-2">{description}</  p>
         <section className="mt-8 ml-12 mr-8 max-xl:ml-2">

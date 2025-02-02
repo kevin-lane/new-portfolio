@@ -1,13 +1,12 @@
-'use client'
-import React from 'react'
+'use client';
 
 export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Message has been sent!");
-
+    alert('Sorry, this feature is currently under construction. Please send me an email instead and I will get back to you as soon as I can!');
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <div className='mb-5'>

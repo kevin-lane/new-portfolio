@@ -2,6 +2,12 @@ import ContactForm from '@/components/forms/contact-form';
 import React from 'react';
 import ContactCard from '@/components/cards/contact-card';
 
+//Meta data for SEO and web availability
+export const metadata = {
+  title: "Contact - Kevin Lane",
+  description: "Do you need help with your web projects or want to hire me? Please feel free to contact your future web developer in Sweden.",
+};
+
 export default function Contact() {
   return (
     <section className="min-h-screen flex items-center justify-center">

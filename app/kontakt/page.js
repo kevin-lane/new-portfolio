@@ -1,6 +1,12 @@
 import ContactForm from '@/components/forms/contact-form';
 import ContactCard from '@/components/cards/contact-card';
 
+//Metadata för SEO och synlighet på Google
+export const metadata = {
+  title: "Kontakt - Kevin Lane",
+  description: "Vill ni anställa mig för era projekt? Kontakta gärna er framtida utvecklare som är taggad att få hjälpa er mot framgång!",
+};
+
 export default function Kontakt() {
   return (
     <section className="min-h-screen flex items-center justify-center">

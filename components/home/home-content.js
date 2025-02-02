@@ -13,11 +13,11 @@ import SkillCard from '../cards/skill-card';
 
 export default function HomeContent() {
   const {language, setLanguage} = useContext(LanguageContext);
-  const { dark, setDark } = useContext(ThemeContext)
+  const { dark, setDark } = useContext(ThemeContext);
 
   return (
     <main className='w-80'>
-      <h1 className="font-black mb-8 mt-8 text-3xl w-96">{language === 'sv' ? 'HEJ, JAG HETER KEVIN' : 'HI THERE, I AM KEVIN'}</h1>
+      <h1 className="font-black mb-8 text-3xl w-96">{language === 'sv' ? 'HEJ, JAG HETER KEVIN' : 'HI THERE, I AM KEVIN'}</h1>
       <p className="mb-8 w-80">{language === 'sv' ?
         'En driven Frontendutvecklare med kunskaper inom UX Design och SEO. Jag älskar att omvandla kod till interaktiva och användarvänliga sidor som rankar högt på sökmotorer som Google. ' :
         'Here is a passionate Frontend Developer with UX Design and SEO skills. I   enjoy turning code into interactive and user-friendly sites that ranks high on Google. ' }</p>

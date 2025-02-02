@@ -4,17 +4,32 @@ import Image from 'next/image';
 import WebsiteGlobe from '@/public/websiteGlobe_white.svg';
 import GitHub from '@/public/github_white.svg';
 
+  //Genererar metadata dynamiskt för att få projektets namn i meta titeln
+  export async function generateMetadata({ params }) {
+    const { slug } = params;
+    const projects = await getProjects();
+    const project = projects.find((proj) => proj.slug === slug);
+
+    if (!project) {
+      return {
+        title: 'Projektet hittades ej',
+        description: 'Detta projekt existerar ej!',
+      };
+    }
+
+    return {
+      title: project.title + ' - Kevin Lane',
+      description: project.description,
+    };
+  }
+
 export default async function ProjectDetailsPage({ params }) {
   const { slug } = params;
   const projects = await getProjects();
   const project = projects.find((proj) => proj.slug === slug);
 
-  // Debugging logs
-  console.log('Slug:', slug);
-  console.log('All projects:', projects);
-
   if(!project){
-    return <h1>Project not found</h1>
+    return <h1 className='min-h-screen block p-32 text-4xl'>Projektet hittades ej! Håll utkik efter framtida projekt!</h1>
   }
 
   const { id, title, description, technologies, projectURL, githubURL, image } = project;
