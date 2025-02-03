@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <form action={`https://formspree.io/f/${process.env.FORMSPREE_FORM_ID}`} method="POST">
+    <form action={`https://formspree.io/f/mldgnavb`} method="POST">
       <div className='mb-5'>
         <label className='ml-8 max-[400px]:ml-12' htmlFor="name">Name</label><br/>
         <input className='w-80 p-3 border border-indigo-300 rounded mt-2 ml-8 text-black max-[400px]:ml-12' type="text" id='name' name="name"  placeholder='Name' required/><br/>
