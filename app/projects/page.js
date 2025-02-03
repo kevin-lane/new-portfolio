@@ -28,7 +28,7 @@ export default async function Projects() {
 
         {updatedProjects.map((project) =>{
           return(
-            <ProjectCard key={project.id} id={project.id} title={project.title} slug={project.slug} projectUrl={project.projectURL} githubUrl={project.githubURL} image={project.image} />
+            <ProjectCard key={project.id} id={project.id} title={project.title} description={project.description} slug={project.slug} projectUrl={project.projectURL} githubUrl={project.githubURL} image={project.image} />
         )})}
         <ProjectCard title='NEXT PROJECT COMING SOON' description='NEW PROJECT COMING UP SOON' slug='' projectUrl='' githubUrl='' image={null}/>
         <p className='w-96 ml-12 mb-16'>Interested in hiring me for your project? Please feel free to <Link href='/contact'><strong>CONTACT ME</strong></Link> so that we can have a chat!</p>
