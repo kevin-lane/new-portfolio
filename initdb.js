@@ -4,6 +4,16 @@ const db = sql('projects.db');
 const dummyProjects = [
   {
     id:1,
+    title: 'Tastes from Sri Lanka',
+    slug: 'sri-lankan-restaurant',
+    description: 'A fictitious Sri Lankan Restaurant online fullstack site built on the MERN stack. ',
+    image: '/assets/sri-lankan-restaurant.jpg',
+    technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Express'],
+    projectURL: 'https://mern-srilankan-restaurant.vercel.app/',
+    githubURL: 'https://github.com/kevin-lane/mern-srilankan-restaurant'
+  },
+  {
+    id:2,
     title: 'Kelan Photography',
     slug: 'kelan-photography',
     description: 'Kelan Photography is a fictious online store where you can purchase photos.The user simply buys the picture and downloads the image to his device. The ideawith this project is for a photographer to be able to sell his captures. ',
@@ -13,7 +23,7 @@ const dummyProjects = [
     githubURL: 'https://github.com/kevin-lane/kelan-photography-vue'
   },
   {
-    id:2,
+    id:3,
     title: 'Weather Vue',
     slug: 'weather-vue',
     description: 'A simple weather app built with TypeScript, Vue and TailwindCSS!',
