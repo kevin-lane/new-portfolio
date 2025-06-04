@@ -19,8 +19,8 @@ export default function HomeContent() {
   return (
     <main className='flex gap-12 max-md:block'>
       <section className='m-4 mt-12 max-md:text-center'>
-        <h1 className="font-black mb-2 text-5xl md:w-96">KEVIN LANE</h1>
-        <h2 className='mb-8 text-2xl'>{ language === 'sv' ? 'Frontendutvecklare' : 'Frontend Developer' }</h2>
+        <h1 className={`font-black mb-2 text-5xl ${dark ? 'text-blue-300' : 'text-blue-800'} md:w-96`}>KEVIN LANE</h1>
+        <h2 className='mb-8 text-2xl italic'>{ language === 'sv' ? 'Frontendutvecklare' : 'Frontend Developer' }</h2>
         <p className="mb-8 md:w-80">{language === 'sv' ?
         'En driven Frontendutvecklare med kunskaper inom UX Design och SEO. Jag älskar att omvandla kod till interaktiva och användarvänliga sidor som rankar högt på sökmotorer som Google. När jag inte kodar, så gillar jag att resa, fotografera och träna.' :
         'Here is a passionate Frontend Developer with UX Design and SEO skills. I   enjoy turning code into interactive and user-friendly sites that ranks high on Google. When not coding or designing websites, I enjoy photography, traveling and  going to the gym.' }</p>
