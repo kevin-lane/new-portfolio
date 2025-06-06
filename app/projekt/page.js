@@ -24,8 +24,8 @@ export default async function Projekt() {
       <article>
         <h1 className="font-black mt-32 mb-4 text-3xl w-96 max-lg:mt-16 ml-12">PROJEKTARBETEN</h1>
         <p className="mb-8 ml-12 w-96">Här hittar ni några av mina projekt som jag har byggt</p>
-        {updatedProjects.map((project) => {
-          return <ProjectCard key={project.id} title={project.title} description={project.description} slug={project.slug} projectUrl={project.projectURL} githubUrl={project.githubURL} image={project.image}/>
+        {projects.map((project) => {
+          return <ProjectCard key={project.id} title={project.title} description={project.description} slug={project.slug} liveDemo={project.liveDemo} gitHub={project.gitHub} image={project.image}/>
         })}
         <ProjectCard title='NÄSTA PROJEKT KOMMER INOM KORT' description='NYTT PROJEKT KOMMER SNART' slug='' projectUrl='' githubUrl='' />
 

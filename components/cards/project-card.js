@@ -9,7 +9,7 @@ import GitHubWhite from '@/public/github_white.svg';
 import { useContext } from "react";
 import { ThemeContext } from "@/components/providers/theme-provider";
 
-export default function ProjectCard({ title, slug, description, githubUrl, projectUrl, image }) {
+export default function ProjectCard({ title, slug, description, gitHub, liveDemo, image }) {
   const theme = useContext(ThemeContext);
   const {dark, setDark} = useContext(ThemeContext);
 
@@ -25,9 +25,9 @@ export default function ProjectCard({ title, slug, description, githubUrl, proje
         <p className="flex mb-4 w-60">{description}</p>
       </section>
       <section className="flex justify-center pt-4 space-x-24 ">
-        {projectUrl && <>
-          <Link href={projectUrl} target="_blank"><SkillCard skill='Live' src={dark ? WebsiteGlobeWhite : WebsiteGlobe} alt='live'/></Link>
-          <Link href={githubUrl} target="_blank"><SkillCard skill='Github' src={dark ? GitHubWhite : GitHub} alt='github'/></Link>
+        {liveDemo && <>
+          <Link href={liveDemo} target="_blank"><SkillCard skill='Live' src={dark ? WebsiteGlobeWhite : WebsiteGlobe} alt='live'/></Link>
+          <Link href={gitHub} target="_blank"><SkillCard skill='Github' src={dark ? GitHubWhite : GitHub} alt='github'/></Link>
         </>
         }
       </section>
