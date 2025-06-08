@@ -1,6 +1,6 @@
 import ProjectCard from '@/components/cards/project-card';
 import Link from 'next/link';
-// import { getProjects } from '@/lib/projects';
+import { getProjects } from '@/lib/projects';
 import { getStaticProps } from '@/lib/projects';
 
 //Meta data for SEO and web availability
@@ -9,8 +9,10 @@ export const metadata = {
   description: "Check out my portfolio and projects. I would love to help you with your web project as well!",
 };
 
+export const revalidate = 60;
+
 export default async function ProjectsPage() {
-  const projects = await getStaticProps();
+  const projects = await getProjects();
   return (
     <section className='min-h-screen flex items-center justify-center ml-6'>
       <article>

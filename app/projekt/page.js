@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default async function Projekt() {
-  const projects = await getStaticProps();
+  const projects = await getProjects();
   const updatedProjects = projects.map((project) => ({
     ...project,
     image: project.slug === 'kelan-photography' ? kelanPhoto :
