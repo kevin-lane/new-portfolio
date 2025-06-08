@@ -12,6 +12,8 @@ export const metadata = {
   description: "Kika gärna på min portfolio och projektarbeten för inspiration. Låt mig hjälpa dig eller ditt företag med era utvecklingsprojekt!",
 };
 
+export const revalidate = 60;
+
 export default async function Projekt() {
   const projects = await getProjects();
   const updatedProjects = projects.map((project) => ({
