@@ -1,5 +1,7 @@
 import ProjectCard from '@/components/cards/project-card';
 import { getProjects } from '@/lib/projects';
+import { getStaticProps } from '@/lib/projects';
+
 import Link from 'next/link';
 import kelanPhoto from '@/assets/kelanphotography.jpg';
 import weatherVue from '@/assets/weather-vue.jpg';
@@ -11,7 +13,7 @@ export const metadata = {
 };
 
 export default async function Projekt() {
-  const projects = await getProjects();
+  const projects = await getStaticProps();
   const updatedProjects = projects.map((project) => ({
     ...project,
     image: project.slug === 'kelan-photography' ? kelanPhoto :
