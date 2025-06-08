@@ -13,6 +13,10 @@ export default function ProjectCard({ title, slug, description, gitHub, liveDemo
   const theme = useContext(ThemeContext);
   const {dark, setDark} = useContext(ThemeContext);
 
+  console.log("Title: " + title);
+  console.log(image);
+  console.log("IMAGE DEBUG", { title, image });
+
   return (
     <div className={`block p-4 m-12 ${slug === '' || undefined ? 'pointer-events-none' : ''} ${theme.dark ? 'bg-[#252540]' : 'bg-[#F6E3E3]'}  space-x-6 rounded max-lg:block`}>
       <section>

@@ -32,7 +32,7 @@ export default async function Projects() {
            project.image || null,  // Fallback if you add more projects
   }));
 
-  // console.log(updatedProjects);
+  console.log(updatedProjects);
 
   return (
     <section className='min-h-screen flex items-center justify-center ml-6'>
@@ -40,11 +40,20 @@ export default async function Projects() {
         <h1 className="font-black mt-32 mb-4 text-3xl w-96 max-lg:mt-16 ml-12">PROJECTS</h1>
         <p className="mb-8 ml-12 w-96">Here you will find some of my projects, both school and hobby projects. </p>
 
-        {projects.map((project) =>{
+        {updatedProjects.map((project) =>{
           console.log(project);
 
           return(
-            <ProjectCard key={project.id} id={project.id} title={project.title} description={project.description} slug={project.slug} liveDemo={project.liveDemo} gitHub={project.gitHub} image={project.image} />
+            <ProjectCard
+              key={project.id}
+              id={project.id}
+              title={project.title}
+              description={project.description}
+              slug={project.slug}
+              liveDemo={project.liveDemo}
+              gitHub={project.gitHub}
+              image={project.image}
+            />
         )})}
         <ProjectCard title='NEXT PROJECT COMING SOON' description='NEW PROJECT COMING UP SOON' slug='' projectUrl='' githubUrl='' image={null}/>
         <p className='w-96 ml-12 mb-16'>Interested in hiring me for your project? Please feel free to <Link href='/contact'><strong>CONTACT ME</strong></Link> so that we can have a chat!</p>
