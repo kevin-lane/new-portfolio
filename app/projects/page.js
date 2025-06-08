@@ -1,7 +1,6 @@
 import ProjectCard from '@/components/cards/project-card';
 import Link from 'next/link';
 import { getProjects } from '@/lib/projects';
-import { getStaticProps } from '@/lib/projects';
 
 //Meta data for SEO and web availability
 export const metadata = {
@@ -20,8 +19,6 @@ export default async function ProjectsPage() {
         <p className="mb-8 ml-12 w-96">Here you will find some of my projects, both school and hobby projects. </p>
 
         {projects.map((project) =>{
-          console.log(project);
-
           return(
             <ProjectCard
               key={project.id}
